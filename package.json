@@ -2,10 +2,10 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://goitacademy.github.io/TeamSeven",
+  "homepage": "https://Kreidina.github.io/personalProject",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /TeamSeven/"
+    "build": "parcel build src/*.html --public-url /personalProject/"
   },
   "repository": {
     "type": "git",

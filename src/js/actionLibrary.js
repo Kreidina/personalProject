@@ -29,7 +29,6 @@ refs.btnQueue.addEventListener('click', evt => {
 //refs.btnWatched.addEventListener('click', renderingFromStorage.loadFromStorageWatched);
 //refs.btnQueue.addEventListener('click', renderingFromStorage.loadFromStorageQueue);
 
-
 async function fetchData(genresBase) {
   try {
     newLoader.showLoader();
@@ -39,9 +38,8 @@ async function fetchData(genresBase) {
     const container = document.querySelector('.main-content');
     container.innerHTML = '';
 
-    results.map(result => { 
-      const { poster_path, original_title, genres, release_date, id } =
-        result;
+    results.map(result => {
+      const { poster_path, original_title, genres, release_date, id } = result;
       const date = release_date.slice(0, 4);
 
       const genresArray = [...genresBase.genres];
@@ -49,9 +47,9 @@ async function fetchData(genresBase) {
       let genresNames = [];
       const other = 'Other';
       for (let i = 0; i < genreIds.length; i++) {
-        const genre = genresArray.find(g => g.id === genreIds[i].id); 
+        const genre = genresArray.find(g => g.id === genreIds[i].id);
         genresNames.push(genre.name);
-      } 
+      }
       let currentGanre = [...genresNames.slice(0, 2), other].join(', ');
       if (genresNames.length < numberOfGeneras) {
         currentGanre = [...genresNames].join(', ');
@@ -67,9 +65,11 @@ async function fetchData(genresBase) {
 
       container.insertAdjacentHTML('beforeend', mk);
     });
-   
+
     newLoader.hideLoader();
   } catch (error) {
     console.error('Помилка під час отримання даних:', error);
   }
 }
+// reer
+const fix = 0;
